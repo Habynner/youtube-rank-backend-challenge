@@ -21,7 +21,7 @@ export class UserService {
   async usersList() {
     const savedUsers = await this.userRopository.find();
     const usersList = savedUsers.map(
-      (users) => new UserListDto(users.id, users.nome),
+      (users) => new UserListDto(users.id, users.name),
     );
 
     return usersList;

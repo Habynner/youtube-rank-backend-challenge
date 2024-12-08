@@ -11,7 +11,7 @@ export class CreateUserDto {
     message:
       'O campo name não pode estar vazio. certifique-se de estar usando (name) no payload.',
   })
-  nome: string;
+  name: string;
 
   @IsEmail(undefined, { message: 'email precisa estar no formato e-mail.' })
   @EmailEhUnico({ message: 'Email já cadastrado.' })

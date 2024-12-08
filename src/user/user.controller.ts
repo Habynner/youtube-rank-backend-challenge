@@ -34,7 +34,7 @@ export class UserController {
     return new NestResponseBuilder()
       .comStatus(HttpStatus.CREATED)
       .comHeader({
-        Location: `/users/${createdUser.nome}`,
+        Location: `/users/${createdUser.name}`,
       })
       .comBody(createdUser)
       .build();
@@ -68,7 +68,7 @@ export class UserController {
 
     return {
       user: userUpdated,
-      message: `The user ${updateUserDto.nome} has been updated.`,
+      message: `The user ${updateUserDto.name} has been updated.`,
     };
   }
 

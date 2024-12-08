@@ -9,6 +9,8 @@ import { EmailEhUnico } from '../validator/email-unico.validator';
 import { Exclude, Expose } from 'class-transformer';
 
 export class UpdateUserDto {
+  id?: string;
+
   @Expose({ name: 'name' })
   @IsString()
   @IsNotEmpty({
@@ -16,7 +18,7 @@ export class UpdateUserDto {
       'O campo name não pode estar vazio. certifique-se de estar usando (name) no payload.',
   })
   @IsOptional()
-  nome?: string;
+  name?: string;
 
   @IsEmail(undefined, { message: 'email precisa estar no formato e-mail.' })
   @EmailEhUnico({ message: 'Email já cadastrado.' })

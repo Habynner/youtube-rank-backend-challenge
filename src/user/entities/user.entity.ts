@@ -7,7 +7,7 @@ import {
 @Entity({ name: 'users' })
 export class UserEntity {
   @Column({ name: 'nome', length: 100, nullable: false })
-  nome: string;
+  name: string;
 
   @Column({ name: 'email', length: 70, nullable: false })
   email: string;

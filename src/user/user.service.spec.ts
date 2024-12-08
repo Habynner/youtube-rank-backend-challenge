@@ -60,7 +60,7 @@ describe('UserService', () => {
     };
     jest.spyOn(userRepository, 'update').mockResolvedValue(updateResult);
 
-    const result = await userService.updateUser('1', { nome: 'Updated Name' });
+    const result = await userService.updateUser('1', { name: 'Updated Name' });
 
     expect(userRepository.update).toHaveBeenCalledWith('1', {
       nome: 'Updated Name',

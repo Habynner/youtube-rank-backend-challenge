@@ -31,7 +31,7 @@ export class UserRepository {
   }
 
   async existeComNome(name: string) {
-    const possivelUsuario = this.users.find((usuario) => usuario.nome === name);
+    const possivelUsuario = this.users.find((usuario) => usuario.name === name);
 
     return possivelUsuario !== undefined;
   }
